@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="authentication-service" />
+        <module name="data-top-up-service" />
+        <module name="spring-cloud-config-server" />
+        <module name="api-gateway" />
+        <module name="ringtone-personalization-service" />
+        <module name="service-activation-service" />
+        <module name="billing-service" />
+        <module name="naming-server" />
+      </profile>
+    </annotationProcessing>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="api-gateway" options="" />
+      <module name="authentication-service" options="" />
+      <module name="billing-service" options="" />
+      <module name="data-top-up-service" options="" />
+      <module name="naming-server" options="" />
+      <module name="ringtone-personalization-service" options="" />
+      <module name="service-activation-service" options="" />
+      <module name="spring-cloud-config-server" options="" />
+    </option>
+  </component>
+</project>
