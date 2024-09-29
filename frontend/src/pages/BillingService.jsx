@@ -1,6 +1,7 @@
 import React, {useState} from 'react'
 import Spinner from "../components/Spinner";
 import axios from 'axios';
+import Header from '../components/Header';
 
 export default function BillingService() {
 
@@ -72,19 +73,24 @@ export default function BillingService() {
 
 
   return (
-    <>
+    <> 
+    <Header></Header>
         <div className='row'>
-            <div><h3>Billing Service</h3></div>
+            <div><h2>Billing Service</h2></div>
+            <p style={{ textAlign: 'center' }}>
+            Manage your bills effortlessly. View, track, and pay your bills with ease, all in one place. Stay on top of your payments and keep your services running smoothly. Your finances, your control—it's all just a tap away!
+            </p>
             <br /><br /><br />
+            
             {loading && <Spinner />}
-            <div className="text-center">
-                <form className="row g-3">
+            <div className="text-center" style={{border : "1px solid black" , width:"40%" , marginLeft: "30%"}}>
+                <form className="row g-3" style={{display:'flex' , flexDirection:'column' , alignItems : "center" , padding: "50px 0 50px"}}>
                     <div className="col-auto">
                         <label htmlFor="phone" className="visually-hidden">
                             Phone Number
                         </label>
                         <input
-                            style={textStyle}
+                            style={{marginLeft:'5%'}}
                             type="text"
                             className="form-control"
                             id="phone"
@@ -93,11 +99,11 @@ export default function BillingService() {
                             onChange={(e) => setPhone(e.target.value)}
                         />
                     </div>
-                    <div className="col-auto">
+                    <div className="col-auto" >
                         <button
-                            style={buttonStyle}
+                            style={{width:'100%' , marginLeft : '7%' , marginTop : '10%' }}
                             type="button"
-                            className="btn btn-primary mb-3"
+                            className="btn btn-primary"
                             onClick={viewBill}
                         >
                             View Your Current Bill

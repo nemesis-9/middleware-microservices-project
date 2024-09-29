@@ -17,8 +17,8 @@ function App() {
       <>
           <Router>
               <div className='container'>
-                  <Header/>
-                  <h1>Middleware Assignment</h1>
+                
+                 
                   <Routes>
                       <Route path='/login' element={<Login />} />
                       <Route path='/register' element={<Register />} />

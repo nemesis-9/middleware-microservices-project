@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import Spinner from '../components/Spinner';
 import axios from 'axios';
+import Header from '../components/Header';
 
 function RingTonePersonalisation() {
     const [phoneNumber, setPhoneNumber] = useState('');
@@ -54,7 +55,8 @@ function RingTonePersonalisation() {
     };
 
     return (
-        <>
+        <div >  
+        <Header></Header>
             <h2>Ring Tone Personalisation</h2>
             <br />
 
@@ -68,10 +70,12 @@ function RingTonePersonalisation() {
             <br />
 
             <div>
-                <div style={{ display: 'flex', alignItems: 'center', marginRight: '20px' }}>
-                    <div style={{ marginRight: '20px' }}>
-                        <h4>Set Your Ring Tone</h4>
-
+                <div style={{ display: 'flex', alignItems: 'center', marginRight: '20px' , border: '1px solid black' , flexDirection: 'column' , alignItems: 'center' }}>
+                         
+                        <div>
+                        <h4 style={{marginTop : '20px' , marginBottom: '20px'}}>Set Your Ring Tone</h4>
+                        </div>
+                        <div style={{display:'flex' , flexDirection: 'row'}}>
                         <div style={{ display: 'flex', alignItems: 'center', marginRight: '20px' }}>
                             <input
                                 type="text"
@@ -81,31 +85,36 @@ function RingTonePersonalisation() {
                                 style={inputStyle}
                                 onChange={(e) => setPhoneNumber(e.target.value)}
                             />
-
-                            <select
-                                className="form-control"
-                                style={{ ...inputStyle, marginLeft: '10px' }}
-                                onChange={(e) => setSelectedRingtone(e.target.value)}
-                            >
-                                <option value="">Select a Ringtone</option>
-                                <option value="My Heart Will Go Song">My Heart Will Go Song</option>
-                                <option value="Salli Song">Salli Song</option>
-                                <option value="Moon and Light Song">Moon and Light Song</option>
-                                <option value="Despasito Song">Despasito Song</option>
-                                <option value="Broken Angel Song">Broken Angel Song</option>
-                            </select>
-
-                            <button
-                                type="submit"
-                                className="btn btn-primary mb-1 mx-3"
-                                style={buttonStyle}
-                                onClick={handleSetRingtone}
-                            >
-                                Set Song
-                            </button>
                         </div>
+                        <div>
+                        <select
+                            className="form-control"
+                            style={{ ...inputStyle, marginLeft: '10px' }}
+                            onChange={(e) => setSelectedRingtone(e.target.value)}
+                        >
+                            <option value="">Select a Ringtone</option>
+                            <option value="My Heart Will Go Song">My Heart Will Go Song</option>
+                            <option value="Salli Song">Salli Song</option>
+                            <option value="Moon and Light Song">Moon and Light Song</option>
+                            <option value="Despasito Song">Despasito Song</option>
+                            <option value="Broken Angel Song">Broken Angel Song</option>
+                        </select>
+                        </div>
+                        </div>
+                           
+                        <div style={{margin : '30px 0 30px 0px'}}>
+                        <button
+                            type="submit"
+                            className="btn btn-primary mb-1 mx-3"
+                            style={buttonStyle}
+                            onClick={handleSetRingtone}
+                        >
+                            Set Song
+                        </button>
+                        </div>
+                        
                     </div>
-                </div>
+               
             </div>
 
             <div
@@ -178,7 +187,7 @@ function RingTonePersonalisation() {
             </div>
 
             {loading && <Spinner />}
-        </>
+        </div>
     );
 }
 

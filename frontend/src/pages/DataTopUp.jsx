@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import '../index.css';
 import axios from 'axios';
 import Spinner from '../components/Spinner'
+import Header from '../components/Header';
 
 export default function DataTopUp() {
     const textStyle = {
@@ -48,12 +49,17 @@ export default function DataTopUp() {
     };
 
     return (
+        <>
+        <Header></Header>
         <div className="p-3 mb-2 text-center">
-            <h3 className="mt-2 mb-2">Data Top Up Service</h3>
-            <br /><br /><br /><br /><br />
+            <h2>Data Top Up Service</h2>
+            <p style={{ textAlign: 'center' }}>
+            Stay connected without interruptions. Choose the data top-up plan that suits your needs, and ensure you're always online. Power up your browsing, streaming, and socializing with a seamless data experience. The choice is yours to keep the world at your fingertips!
+            </p>
+            <br /><br />
             {loading && <Spinner />}
-            <div className="text-center">
-                <form className="row g-3">
+            <div className="text-center" style={{border : "1px solid black" , width:"40%" , marginLeft: "30%"}}>
+                <form className="row g-3" style={{display:'flex' , flexDirection:'column' , alignItems : "center" , padding: "50px 0 50px"}}>
                     <div className="col-auto">
                         <label htmlFor="phone" className="visually-hidden">
                             Phone Number
@@ -169,5 +175,6 @@ export default function DataTopUp() {
                 </div>
             </div>
         </div>
+        </>
     );
 }
