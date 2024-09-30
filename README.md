@@ -8,7 +8,7 @@ This project implements a microservice architecture as part of a middleware cour
 - **api-gateway**: Handles routing requests to the appropriate microservice.
 - **authentication-service**: Manages user authentication and authorization using JWT.
 - **billing-service**: Manages billing-related operations, including service usage and invoicing.
-- **client**: The frontend service for user interaction, providing interfaces for different functionalities.
+- **frontend**: The frontend service for user interaction, providing interfaces for different functionalities.
 - **data-top-up-service**: Allows users to top up data services.
 - **naming-server**: Manages the registration and discovery of microservices.
 - **ringtone-personalization-service**: Provides users with the ability to personalize ringtones.
@@ -29,7 +29,7 @@ This project implements a microservice architecture as part of a middleware cour
 
 1. Clone the repository:
    ```bash
-   git clone <repo-url>
+   git clone https://github.com/nemesis-9/middleware-microservices-project.git
    ```
 
 2. Set up the microservices by running each service in its respective folder:
@@ -48,10 +48,10 @@ This project implements a microservice architecture as part of a middleware cour
 
 ## Technologies Used
 
-- **Frontend**: React, JSX, Vite
-- **Backend**: Spring Boot, Node.js, Express
-- **Database**: MySQL (or MongoDB if required)
-- **API Gateway**: Zuul or Spring Cloud Gateway
+- **Frontend**: React
+- **Backend**: Spring Boot
+- **Database**: MongoDB
+- **API Gateway**: Spring Cloud Gateway
 - **Service Discovery**: Eureka Naming Server
 - **Configuration Management**: Spring Cloud Config Server
 
@@ -59,14 +59,24 @@ This project implements a microservice architecture as part of a middleware cour
 
 1. Ensure you have the required services installed:
    - **Node.js**
-   - **MySQL/MongoDB**
+   - **MongoDB**
    - **Java (JDK)**
    - **Maven**
 
-2. Configure the database credentials in the respective `.env` or `application.properties` files.
+2. Configure the database credentials in the respective `application.properties` files.
 
 3. Start all services and access the system through the API gateway.
 
 ## License
 
 This project is licensed under the MIT License.
+
+## Group Members
+
+- 21002274 - Y.M.P.K. Yapa
+- 21000192 - R.A.S.D. Bandara
+- 21001936 - H.P.M. Thenuka
+- 21001332 - K.R.S. Perera
+- 21001448 - T.S. Preena
+- 21002258 - W.K.S. Welikumbura
+- 21001197 - H.D.A. Mendis
